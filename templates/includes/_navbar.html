@@ -1,0 +1,20 @@
+
+<ul class="nav nav-tabs">
+    {% if active_page == "zamowienie"%}
+  	<li class="nav-item">
+    <a class="nav-link active" href="/">Dane</a>
+  	</li>
+  	<li class="nav-item">
+    <a class="nav-link disabled" href="#">Zamówienie</a>
+  	</li>
+  	</li>
+    {% elif active_page == "menu"%}
+    <li class="nav-item">
+    <a class="nav-link disabled" href="/">Dane</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link active" href="/menu">Zamówienie</a>
+    </li>
+    </li>
+    {% endif %}
+	</ul>

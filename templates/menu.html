@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% set active_page = "menu" %}
+
+{% block body %}
+<div class="mt-5">
+	<div class="text-center">
+		<ul class="list-inline span=10">
+        	<li class="list-inline-item"><button name = "pizza" onclick="SetPizza()"><img src="http://www.pngmart.com/files/1/Pepperoni-Pizza.png" height="40" width="40"><span>Pizza</span></button></li>
+        	<li class="list-inline-item"><button name = "makarony" onclick = ""><img src="http://okruszek.pl/wp-content/uploads/2014/10/penne.png" height="40" width="40"><span>Makarony</span></button></li>
+        	<li class="list-inline-item"><button name = "przystawki" onclick = ""><img src="http://www.burgerking.pl/site/assets/files/2039/download-1.png" height="40" width="40"><span>Przystawki</span></button></li>
+        	<li class="list-inline-item"><button name = "napoje" onclick = ""><img src="http://pngimg.com/uploads/cocacola/cocacola_PNG21.png" height="40" width="40"><span>Napoje</span></button></li>
+        	<li class="list-inline-item"><button name = "sosy" onclick = ""><img src="https://images.telepizza.com/vol/pl/images/content/productos/iocz_c.png" height="50" width="40"><span>Sosy</span></button></li>
+        	<li class="list-inline-item"><button name = "gadzety" onclick = ""><img src="https://www.mall.pl/i/28494952/1000/1000" height="50" width="40"><span>Gadżety</span></button></li>
+    	</ul>
+    </div>
+    <div class="ml-5 float-left" style="border-style: solid; border-width: 1px; width:40%; height:400px;">
+    	<ul class="list-group">
+    		{% if active_list == "pizza" %}
+	    		{% for p in pizza %}
+	    			<li class="list-group-item">{{pizza.name}}</li>
+	    		{% endfor %}
+	    	{% endif %}
+    	</ul>
+    		
+
+    </div>
+    <div class="mr-5 float-right" style="border-style: solid; border-width: 1px; width:40%; height:400px;">
+    	
+    </div>
+
+</div>
+
+{% endblock %}
